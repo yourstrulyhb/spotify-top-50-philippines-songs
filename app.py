@@ -6,13 +6,16 @@ https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-u
 
 python -m flask --app .\app\app.py run
 python -m flank run
+
+set FLASK_APP=app
+set FLASK_ENV=development
+
 """
 
 from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-
 def home():
    # return "Hello World, from Flask!"
    return render_template('index.html')
