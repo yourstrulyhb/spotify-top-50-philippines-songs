@@ -8,6 +8,9 @@
    References:
    - https://www.datacamp.com/tutorial/tutorial-postgresql-python
    - https://www.geeksforgeeks.org/how-to-insert-a-pandas-dataframe-to-an-existing-postgresql-table/
+
+   Activate venv: env\Scripts\activate
+   Run: python etl_top_50_songs_ph.py
 """
 import os
 import sys

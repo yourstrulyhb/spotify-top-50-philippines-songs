@@ -1,6 +1,47 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+#website-title-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
 h1 {
   border: 2px #eee solid;
   color: brown;
   text-align: center;
   padding: 10px;
+}
+
+.top-song-list-container {
+  border: 3px solid red;
+}
+
+#top-1-song {
+  display: flex;
+  background-color: cornflowerblue;
+}
+.song-data__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.song-cover-art__container {
+  width: 200px;
+}
+
+.song-cover-art__container img {
+  width: inherit;
+  object-fit: contain;
+}
+
+.song-info__wrapper {
+  display: flex;
+  flex-direction: column;
 }

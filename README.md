@@ -33,3 +33,8 @@
     - [ ] By Date
     - [ ] By Date Range
 - [ ] Deploy website
+
+## References:
+
+- https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
+- https://www.freecodecamp.org/news/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849/
