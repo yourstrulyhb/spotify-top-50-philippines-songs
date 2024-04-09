@@ -6,7 +6,7 @@ Get Spotify Top 50 songs Philippines per week
 https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3
 
 python -m flask --app .\app\app.py run
-python -m flask run
+python -m flask run --debug
 
 set FLASK_APP=app
 set FLASK_ENV=development

@@ -1,7 +1,59 @@
 * {
+  display: block;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: black;
 }
 
+.top-song-list-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 4em;
+}
+
+.header-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding: 0em 1em;
+  border: 1px solid brown;
+}
+
+/* .line {
+  border-bottom: 1px solid black;
+  margin: 0 2em;
+  width: 100%;
+} */
+.text-column-align {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid violet;
+  padding: 0;
+  height: fit-content;
+}
+
+.text-column-align p {
+  margin: 0;
+  border: 1px solid red;
+  color: black;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.text-column-align p:first-child {
+  font-size: 2em;
+}
+
+#text-top-10 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 3.5em;
+  border: 1px solid violet;
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -27,6 +79,7 @@ h1 {
   display: flex;
   background-color: cornflowerblue;
 }
+
 .song-data__wrapper {
   display: flex;
   flex-direction: row;

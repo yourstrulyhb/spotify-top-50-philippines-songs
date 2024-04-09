@@ -1,19 +1,32 @@
 {% extends 'base.html' %} {% block content %}
-<h1>{% block title %} Spotify Top 50 - Philippines {% endblock %}</h1>
+
+<!-- <h1>{% block title %} Spotify Top 50 - Philippines {% endblock %}</h1> -->
 
 <div class="top-song-list-container">
-  <div class="song-container" id="top-1-song">
-    <div class="song-data__wrapper">
-      <div class="song-cover-art__container">
-        <img src="./static/img/temp_song_art.png" />
-      </div>
-      <div class="song-info__wrapper">
-        <p class="song-title">Babaero</p>
-        <p class="song-artists">Hev Abi</p>
-        <p class="prev-rank">Last week: 2</p>
+  <div class="header-banner">
+    <div class="text-ph-spotify__wrapper text-column-align">
+      <p>PH</p>
+      <p>SPOTIFY</p>
+    </div>
+    <!-- <div class="line">gg</div> -->
+    <p class="text" id="text-top-10">TOP 10
+    
+    </p>
+    </div>
+
+    <div class="song-container" id="top-1-song">
+      <div class="song-data__wrapper">
+        <div class="song-cover-art__container">
+          <img src="./static/img/temp_song_art.png" />
+        </div>
+        <div class="song-info__wrapper">
+          <p class="song-title">Babaero</p>
+          <p class="song-artists">Hev Abi</p>
+          <p class="prev-rank">Last week: 2</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  {% endblock %}
+    {% endblock %}
+  </div>
 </div>

@@ -12,6 +12,7 @@
    Activate venv: env\Scripts\activate
    Run: python etl_top_50_songs_ph.py
 """
+
 import os
 import sys
 from dotenv import load_dotenv
