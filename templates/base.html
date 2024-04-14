@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
 
     <link
@@ -23,7 +23,7 @@
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-md navbar-light bg-light">
       <a
         class="navbar-brand"
         href="{{ url_for('home')}}"
@@ -48,7 +48,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <div class="main-container">{% block content %} {% endblock %}</div>
 
     <!-- Optional JavaScript -->
@@ -68,5 +68,7 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <script src="../static/js/styles.js"></script>
   </body>
 </html>

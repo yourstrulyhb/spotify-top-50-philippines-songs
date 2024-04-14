@@ -1,0 +1,7 @@
+@media only screen and (max-width: 900px) {
+  .top-song-list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 50px;
+  }
+}
