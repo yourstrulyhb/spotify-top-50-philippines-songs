@@ -10,6 +10,7 @@ python -m flask run --debug
 
 set FLASK_APP=app
 set FLASK_ENV=development
+
 """
 
 from flask import Flask, render_template

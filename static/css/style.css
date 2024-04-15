@@ -1,20 +1,37 @@
 /* https://codepen.io/pawankolhe/pen/abvMjGB */
-@import "./root.css";
-@import "./responsive.css";
-@import "./animations.css";
+
+* {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body,
+.main-container {
+  background-color: #254867;
+}
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 .main-container {
-  border: 1px solid red;
   padding: 2em 0em;
 }
 
 .header-banner {
+  background-color: #283037;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: fit-content;
-  padding: 0em 1em;
+  padding: 0em 2em;
   margin: 0;
 }
 
@@ -39,14 +56,14 @@
 }
 
 .text-column-align p:first-child {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 #text-top-10 {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
-  font-size: 3.5em;
+  font-size: 4em;
   /* border: 1px solid violet; */
 }
 .navbar {
@@ -70,38 +87,61 @@ h1 {
 .top-song-list-container {
   display: flex;
   flex-direction: column;
-  margin: 2em 250px;
-  /* border: 4px solid #1679ab; */
+  margin: 2em 300px;
   border-radius: 20px;
   overflow: hidden;
   /* glow effect */
-  box-shadow: 0px 0px 60px 5px rgba(93, 235, 216, 0.3);
+  box-shadow: 0px 0px 60px 5px rgba(43, 63, 163, 0.3);
+  padding: 2em 0em;
+  background-color: #283037;
+}
+
+@media only screen and (max-width: 900px) {
+  .top-song-list-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 50px;
+  }
 }
 
 /* SONG DATA GENERAL STYLES */
 .song-data__container {
-  background-color: #074173;
+  background-color: #283037;
   padding: 1em 2em 0.5em 2em;
 }
 
 .song-data__wrapper {
   display: grid;
+  padding: 1em;
   flex-direction: row;
   background-color: beige;
+  background-color: #bebebe;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 2px rgba(26, 44, 144, 0.3);
+  /* box-shadow: 0px 2px 2px 2px rgba(26, 44, 144, 0.3); */
 }
 
 .song-cover-art__container {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 2px;
+  justify-items: center;
   width: fit-content;
   overflow: hidden;
+}
+.song-cover-art__container .prev-rank,
+.song-cover-art__container .curr-rank {
+  margin: 0;
+}
+
+.song-cover-art__container img {
+  border-radius: 10px;
 }
 
 .song-info__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0.5em 1em;
+  padding: 0em 1em;
   align-content: space-around;
   justify-content: space-between;
   /* border: 1px solid red; */
@@ -135,7 +175,9 @@ h1 {
 .top-5-songs {
   padding-top: 1em;
   display: grid;
-  grid-template-columns: auto auto;
+  /* grid-template-columns: auto auto; */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-content: center;
   column-gap: 2em;
   row-gap: 1em;
 }
@@ -148,19 +190,18 @@ div.top-10-songs {
 
 div.top-10-songs .song-data__wrapper {
   display: grid;
-  grid-template-columns: 250px 250px auto;
+  grid-template-columns: 20px 225px 225px auto;
   justify-content: space-between;
-  /* justify-items: center; */
-  /* align-content: space-evenly; */
+  align-content: baseline;
   align-items: start;
   padding: 10px;
   overflow: hidden;
 }
 
 div.top-10-songs .song-data__wrapper p {
-  /* border: 1px solid blue; */
-  text-wrap: nowrap;
+  text-wrap: wrap;
   overflow: hidden;
+  align-self: baseline;
 
   .animate {
     position: relative;
@@ -175,14 +216,14 @@ div.top-10-songs .song-data__wrapper p {
 
 /* CUSTOM SIZES  ========================= */
 div.top-1-song .song-data__wrapper {
-  grid-template-columns: 250px auto;
+  grid-template-columns: 200px auto;
 }
 div.top-5-songs .song-data__wrapper {
   grid-template-columns: 100px auto;
 }
 
 div.top-1-song .song-cover-art__container img {
-  width: 250px;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -192,18 +233,66 @@ div.top-5-songs .song-cover-art__container img {
 }
 
 div.top-1-song .song-title {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 div.top-5-songs .song-title {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 div.top-5-songs .song-artists {
   font-size: 0.8em;
 }
 
-p.prev-rank {
+p.prev-rank,
+p.curr-rank {
   align-self: flex-end;
   font-size: 0.8em;
+}
+
+@keyframes leftright {
+  0%,
+  20% {
+    transform: translateX(0%);
+    left: 0%;
+  }
+  80%,
+  100% {
+    transform: translateX(-100%);
+    left: 100%;
+  }
+}
+
+.fader {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 25px;
+
+  &.fader-left {
+    left: 0;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+  }
+
+  &.fader-right {
+    right: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    );
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
